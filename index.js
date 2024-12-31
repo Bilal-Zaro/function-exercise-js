@@ -1,3 +1,4 @@
+/****bilal */
 let numbers= prompt("plz enter numbers");
 let len= numbers.length;
 function reve(numbers,len){
