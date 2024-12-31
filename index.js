@@ -18,31 +18,38 @@ for(let i =0;i<=15;i++){
     }
 }
 /********/
-// let text=prompt("plz enter a text : ").toLowerCase();
-// let lentext =text.length;
-// function order(text,textlen){
-// let max=text.charcodeAt(0);
-//     for (let i=0;i<textlen;i++){
-//         for(let j=0)
-//     }
+function order(input) {
+  let str = input.toLowerCase();
+  let orderStr = '';
 
-// }
-let text = prompt("plz enter a text : ").toLowerCase();
-function order(tex) {
-  for (let i = 1; i < tex.length; i++) {
-    let key = tex.charAt(i);
-    let j = i - 1;
-
-    // Moving elements of arr[0..i-1], that are
-    // greater than key, to one position ahead
-    while (j >= 0 && tex.charAt(j) > key) {
-      tex.charAt(j+1) = tex.charAt(j);
-      j = j - 1;
+  for (let i = 0; i < input.length; i++) {
+      let min = str[0];
+    for (let j = 0; j < str.length; j++) 
+      {
+      if (min > str[j]) {
+        min = str[j];
+      }
     }
-
-    tex.charAt(j+1) = key;
+    orderStr += min;
+    str = str.replace(min, '');
   }
-
-  return tex;
+  return orderStr;
 }
-console.log(order(text));
+console.log(order(prompt("Enter a text : ")));
+let num = prompt("plz Enter numbers : ");
+num =num+"";
+let resault ="";
+for(let i=0;i<num.length;i++){
+  if(num[i]>0 && num[i]%2==0 && num[i-1]%2==0){
+    resault += "-";
+  }
+  resault+=num[i];
+}
+console.log(resault);
+
+function agechecker( age){
+  let check = age >= 18 ? "The user is Adult" : "The user is Minor";
+
+return check;
+}
+console.log(agechecker(prompt("plz enter your age")));
