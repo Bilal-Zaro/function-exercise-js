@@ -37,6 +37,8 @@ function order(input) {
   return orderStr;
 }
 console.log(order(prompt("Enter a text : ")));
+
+
 let num = prompt("plz Enter numbers : ");
 num =num+"";
 let resault ="";
@@ -48,9 +50,29 @@ for(let i=0;i<num.length;i++){
 }
 console.log(resault);
 
+var age = prompt("plz enter your age : ")
 function agechecker( age){
   let check = age >= 18 ? "The user is Adult" : "The user is Minor";
 
 return check;
 }
-console.log(agechecker(prompt("plz enter your age")));
+console.log(agechecker(age));
+
+
+/****dom task***/
+// const div = document.getElementById("mydiv");
+// const para = document.createElement("p");
+// para.innerHTML = "bilal";
+// const list = document.createElement("ol");
+// const item1 = document.createElement("li");
+// item1.innerHTML = "Gender:" + "male";
+// const item2 = document.createElement("li");
+// item2.innerHTML = "Age : " + age;
+// const item3 = document.createElement("li");
+// item3.innerHTML = "Order : " + "coffee";
+// div.appendChild(para);
+// div.appendChild(list);
+// list.appendChild(item1);
+// list.appendChild(item2);
+// list.appendChild(item3);
+
